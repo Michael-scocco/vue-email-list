@@ -23,7 +23,7 @@ const app = new Vue({
         .get("https://flynn.boolean.careers/exercises/api/random/mail")//questo ci promette di darci una risposta;
         .then(response => {
             console.log(response.data.response);
-            this.listaEmail.push(this.response.data.response);
+            this.listaEmail.push(response.data.response);
         })
         i++;
         };
