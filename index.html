@@ -1,77 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue Intro</title>
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
-        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-    <style>
-        #app {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        img {
-            width: 600px;
-            height: 400px;
-            object-fit: cover;
-        }
-        .images{
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-        nav {
-            position: absolute;
-            text-align: center;
-            bottom: 2rem;
-            display: block;
-            background-color: white;
-            border-radius: 1rem;
-            padding: 0.5rem 1rem;
-
-        }
-        .active{
-            color: red;
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
+    <div id="app"> 
+        <ul class="lista-email">
+            <li>
+                <h1>Generare 10 indirizzi email</h1>
+            </li>
+            <li v-for="singolaMail in listaEmail">
+                {{singolaMail}}
+            </li>
+        </ul>
 
-    <div id="app">
-
-        <div class="prev" @click="prev">
-            <i class="fas fa-chevron-left"></i>
-        </div>
-        <div class="images">
-            <img :src="images[counter]" alt="">
-            <nav>
-                <!-- Mostrare i pallini -->
-                <i @click="selectImage(index)" class="fas fa-circle" :class="counter === index ? 'active' : '' "
-                    v-for="(img, index) in images"></i>
-            </nav>
-            </div>
-
-        <div class="next" @click="next">
-            <i class="fas fa-chevron-right"></i>
-        </div>
-
-        
     </div>
-
 
     <!-- VUE JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-
-    <!-- Il nostro script main.js -->
-    <script src="./main.js"></script>
+     <!-- LIBRERIA AXIOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
-
-</html>
+</html> 
